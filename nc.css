@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Vercetti Regular';
+    src: url(/fuente/Vercetti-Regular.ttf);
+}
+body {
+    --primary-color: rgb(0, 0, 0);
+	background-color: #ffffff;
+    --dark-color:#000000;
+}
+
+/**Menú de navegación**/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+header.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Vercetti';
+}
+.nav-left i,
+.nav-right a {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+header.scrolled .nav-left i,
+header.scrolled .nav-right a {
+  color: black;
+}
+.nav-center img {
+  height: 40px;
+  transition: filter 0.3s;
+}
+.nav-right a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.men {
+  position: relative;
+}
+
+.men > li {
+  position: relative;
+}
+
+.men li a {
+  background-color: transparent;
+  width: auto;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  font-weight: 500;
+  font-family: 'Vercetti';
+}
+
+.men li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Debajo del ícono */
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.men li:hover > ul {
+  display: block;
+}
+
+.men li ul li a {
+  padding: 12px;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+.men li ul li a:hover {
+  background-color: #f2f2f2;
+}
+.men li ul li{
+  position: relative;
+}
+.men li ul li ul{
+left: 140px;
+top: 0px;
+}
+
+
+/**Imagenes**/
+.logotipo {
+    background-image: url('IMAGENES/logo glanz parte superior.png');
+    height: 5rem;
+    width: 10vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 2rem; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/**Contacto**/
+.contacto {
+    position: absolute;
+    top: 4.2rem; 
+    right: 3rem;
+    font-family: 'Vercetti Regular';
+    font-size: 0.9rem;
+}
+
+.contacto a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto a:hover {
+    color: #888; 
+}
+
+/**Texto**/
+.texto {
+    margin-top: 12rem; 
+    padding: 1rem;
+    padding-right: 0rem;
+    text-align: center; 
+    color: rgb(8, 8, 8); 
+}
+
+.texto h1, .texto h2 {
+    font-family: 'Vercetti Regular';
+    margin: 0;
+    padding: 0;
+}
+
+/**Carrusel**/
+.carrusel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    width: 60vw;
+  }
+  
+  .item-carrusel {
+    text-align: center;
+    width: 300px;
+    margin: 0 1rem;
+    flex-shrink: 0;
+  }
+  
+  .item-carrusel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .item-carrusel img:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-carrusel p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .flecha {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+
+  

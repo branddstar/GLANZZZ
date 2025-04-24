@@ -1,0 +1,494 @@
+@font-face {
+  font-family: 'Vercetti';
+  src: url('fuente/Vercetti-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    --primary-color: white;
+	background-color: #ffffff;
+    --dark-color:#000000;
+}
+
+/**Menú de navegación**/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+header.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Vercetti';
+}
+.nav-left i,
+.nav-right a {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+header.scrolled .nav-left i,
+header.scrolled .nav-right a {
+  color: black;
+}
+.nav-center img {
+  height: 40px;
+  transition: filter 0.3s;
+}
+.nav-right a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.men {
+  position: relative;
+}
+
+.men > li {
+  position: relative;
+}
+
+.men li a {
+  background-color: transparent;
+  width: auto;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  font-weight: 500;
+  font-family: 'Vercetti';
+}
+
+.men li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Debajo del ícono */
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.men li:hover > ul {
+  display: block;
+}
+
+.men li ul li a {
+  padding: 12px;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+.men li ul li a:hover {
+  background-color: #f2f2f2;
+}
+.men li ul li{
+  position: relative;
+}
+.men li ul li ul{
+left: 140px;
+top: 0px;
+}
+/**Imagenes**/
+.gallería {
+    background-image: linear-gradient(100deg, #5c533f50, #b3b0b0de),
+        url('IMAGENES/Glanz-Inicio-Joya.png');
+    height: 37rem;
+    background-size: cover;
+    background-position: center;
+    width: 40vw;
+    margin-left: auto;
+    padding-right: 0px; 
+    background-color: var(--dark-color);
+}
+.logotipo {
+    background-image: url('IMAGENES/LOGO\ GLANZ\ BLANCO.png');
+    height: 10em; 
+    width: 15vw;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    position: absolute; 
+    top: 10rem;
+    left: 18rem; 
+}
+
+/**Texto y botones**/
+.texto {
+    margin-top: -15rem; 
+    padding: 1rem;
+    padding-right: 35rem;
+    text-align: center; 
+    color: white; 
+}
+.texto h1, .texto h2 {
+    font-family: 'Vercetti Regular';
+    margin: 0;
+    padding: 0;
+}
+.texto button {
+    background-color: #f2f7f2; 
+    color: rgb(7, 7, 7);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.texto button:hover {
+    background-color: #8d8888; 
+    color: rgb(230, 229, 229);
+}
+
+/**Galeria**/
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  grid-template-rows: repeat(2, 30rem);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.galeria img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+}
+.img3{
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+.img6{
+  grid-column: 5/9;
+  grid-row: 1/3;
+}
+
+
+/**Banner**/
+.banner {
+  margin-top: 4.5rem;
+	height: 37rem;
+	background-size: cover;
+	background-position: center;
+  background-color: var(--dark-color);
+}
+.content-banner {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 25rem 0;
+}
+.content-banner p {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+.content-banner h2 {
+	color: #fff;
+	font-size: 3.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+.content-banner a {
+	margin-top: 0rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+}
+
+
+.texto button {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Vercetti';
+
+}
+
+.texto button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.texto button:hover {
+  background-color: white;
+}
+
+.texto button:hover a {
+  color: #111;
+}
+
+/**Main**/
+.main-content {
+	background-color: var(--background-color);
+}
+
+/**Agendiseno**/
+.agendiseno {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.diseno,
+.agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.diseno img,
+.agenda img {
+  width: 500px; 
+  height: 500px; 
+  object-fit: cover; 
+  transition: transform 0.3s ease;
+}
+.diseno p,
+.agenda p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Vercetti';
+
+}
+
+/**Mision**/
+.mision {
+  padding: 5rem 2rem;
+}
+
+.mis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.mis h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+.mis p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+.mis img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/**Vision**/
+.vision {
+  padding: 5rem 2rem;
+}
+
+.vis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.vis img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.vis h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+.vis p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+/**Ve**/
+.ve {
+  padding: 5rem 2rem;
+}
+
+.v {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.v h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+.v p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+  font-family: 'Vercetti';
+
+}
+
+.v img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/**Footer**/
+.footer {
+  background-color: var(--dark-color); /* Fondo oscuro para que resalte */
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.foo h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Vercetti';
+
+}
+
+.foo p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: 'Vercetti';
+
+}
+
+.foo button {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Vercetti';
+
+}
+
+.foo button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.foo button:hover {
+  background-color: white;
+}
+
+.foo button:hover a {
+  color: #111;
+}
+
+.foo2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-color);
+  color: white;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.foo2 .logo img {
+  width: 300px;
+  height: auto;
+}
+
+.foo2 .empresa,
+.foo2 .ayuda {
+  max-width: 300px;
+}
+
+.foo2 h1, .foo2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-family: 'Vercetti';
+
+}
+
+.foo2 p {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: 'Vercetti';
+
+}
